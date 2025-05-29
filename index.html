@@ -117,33 +117,63 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <div class="container">
-            <div class="section-title">
-                <h2>Contact Us</h2>
-                <p>Get in touch with us for a free quote or to schedule a service.</p>
-            </div>
-            <div class="contact-container">
-                <div class="contact-info">
-                    <h3>Contact Information</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> 123 Cleaning St, Your City</p>
-                    <p><i class="fas fa-phone"></i> (123) 456-7890</p>
-                    <p><i class="fas fa-envelope"></i> info@cleanpro.com</p>
-                    <p><i class="fas fa-clock"></i> Mon-Fri: 8:00 AM - 6:00 PM</p>
+   <!-- Contact Section -->
+<section class="contact" id="contact">
+    <div class="container">
+        <div class="section-title">
+            <h2>Contact Us</h2>
+            <p>Get in touch with us for a free quote or to schedule a service.</p>
+        </div>
+        
+        <div class="contact-options-container">
+            <!-- Opción 1: Formulario de correo -->
+            <div class="contact-option">
+                <div class="option-header">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email Us</h3>
                 </div>
-                <div class="contact-form">
-                    <form>
-                        <input type="text" placeholder="Your Name" required>
-                        <input type="email" placeholder="Your Email" required>
-                        <input type="text" placeholder="Subject">
-                        <textarea placeholder="Your Message" required></textarea>
-                        <button type="submit" class="btn">Send Message</button>
-                    </form>
+                <form class="contact-form">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <input type="text" placeholder="Subject">
+                    <textarea placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn"><i class="fas fa-paper-plane"></i> Send Message</button>
+                </form>
+            </div>
+            
+            <!-- Opción 2: WhatsApp -->
+            <div class="contact-option whatsapp-option">
+                <div class="option-header">
+                    <i class="fab fa-whatsapp"></i>
+                    <h3>Chat on WhatsApp</h3>
+                </div>
+                <div class="whatsapp-info">
+                    <p>Get instant answers to your questions via WhatsApp:</p>
+                    <a href="https://wa.me/1234567890" class="btn whatsapp-btn" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Start Chat
+                    </a>
+                    <p class="response-time"><i class="fas fa-clock"></i> Typical response time: 15 minutes</p>
                 </div>
             </div>
         </div>
-    </section>
+        
+        <!-- Información de contacto adicional -->
+        <div class="contact-info">
+            <div class="info-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <p>123 Cleaning St, Your City</p>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-phone"></i>
+                <p>(123) 456-7890</p>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-clock"></i>
+                <p>Mon-Fri: 8:00 AM - 6:00 PM</p>
+            </div>
+        </div>
+    </div>
+</section>
 
     <!-- Footer -->
     <footer>
