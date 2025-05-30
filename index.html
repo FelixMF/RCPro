@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <!-- FullCalendar CSS -->
+<link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css' rel='stylesheet' />
+<!-- jQuery (necesario para algunos plugins) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- FullCalendar JS -->
+<script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js'></script>
+<!-- Si quieres soporte para español -->
+<script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/locales/es.min.js'></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CleanPro | Professional Cleaning Services</title>
@@ -117,6 +125,32 @@
         </div>
     </section>
 
+
+   <!-- Booking Section -->
+<section class="booking" id="booking">
+    <div class="container">
+        <div class="section-title">
+            <h2>Book Your Service</h2>
+            <p>Select an available date for your cleaning service</p>
+        </div>
+        
+        <div class="booking-container">
+            <div id="calendar"></div>
+            
+            <div class="booking-details">
+                <h3>Your Appointment Details</h3>
+                <div class="selected-date">
+                    <i class="fas fa-calendar-day"></i>
+                    <span id="selected-date">No date selected</span>
+                </div>
+                <button id="confirm-booking" class="btn" disabled>
+                    <i class="fab fa-whatsapp"></i> Confirm via WhatsApp
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
    <!-- Contact Section -->
 <section class="contact" id="contact">
     <div class="container">
@@ -192,5 +226,6 @@
     <script src="scripts/mobileMenu.js"></script>
     <script src="scripts/language.js"></script>
     <script src="scripts/headerSticky.js"></script>
+    <script src="scripts/booking.js"></script>
 </body>
 </html>
