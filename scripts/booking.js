@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', async function() {
     // CONFIGURACIÓN (MODIFICA ESTOS VALORES)
-    const COMPANY_PHONE = '593984612134'; // Tu número con código de país
+    const COMPANY_PHONE = '13477326277'; // Tu número con código de país
     const COMPANY_NAME = 'CleanPro'; // Nombre de tu empresa
 
     // 1. Inicialización de Firebase
