@@ -2,21 +2,21 @@
 <html lang="es">
 <head>
     <!-- FullCalendar CSS -->
-<link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css' rel='stylesheet' />
-<!-- jQuery (necesario para algunos plugins) -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<!-- FullCalendar JS -->
-<script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js'></script>
-<!-- Si quieres soporte para español -->
-<script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/locales/es.min.js'></script>
+    <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css' rel='stylesheet' />
+    <!-- jQuery (necesario para algunos plugins) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- FullCalendar JS -->
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js'></script>
+    <!-- Soporte para español -->
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/locales/es.min.js'></script>
 
-<!-- Firebase -->
-<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CleanPro | Professional Cleaning Services</title>
+    <title data-translate="title">CleanPro | Professional Cleaning Services</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../styles.css">
 </head>
@@ -55,7 +55,7 @@
             <div class="hero-content">
                 <h1 data-translate="hero.title">Professional Cleaning Services</h1>
                 <p data-translate="hero.text">Delivering excellence in every clean. Transform your space with our trusted team of professionals.</p>
-                <a href="#contact" class="btn" data-translate="hero.btn">Get a Free Quote</a>
+                <a href="#contact" class="btn" data-translate="btn.getQuote">Get a Free Quote</a>
             </div>
         </div>
     </section>
@@ -71,32 +71,32 @@
                 <a href="services/house-cleaning.html" class="service-card">
                     <i class="fas fa-home"></i>
                     <h3 data-translate="services.residential">House Cleaning</h3>
-                    <p data-translate="services.house-cleaning">Thorough cleaning of all living spaces, kitchens, and bathrooms.</p>
+                    <p data-translate="services.descriptions.residential">Thorough cleaning of all living spaces, kitchens, and bathrooms.</p>
                 </a>
                 <a href="services/office-cleaning.html" class="service-card">
                     <i class="fas fa-building"></i>
                     <h3 data-translate="services.commercial">Office Cleaning</h3>
-                    <p>Professional cleaning for workplaces to maintain a healthy environment.</p>
+                    <p data-translate="services.descriptions.commercial">Professional cleaning for workplaces to maintain a healthy environment.</p>
                 </a>
                 <a href="services/window-cleaning.html" class="service-card">
                     <i class="fas fa-window-maximize"></i>
-                    <h3 data-translate="services.residential">Window Cleaning</h3>
-                    <p>Crystal-clear windows for a brighter, more inviting space.</p>
+                    <h3 data-translate="services.windows">Window Cleaning</h3>
+                    <p data-translate="services.descriptions.windows">Crystal-clear windows for a brighter, more inviting space.</p>
                 </a>
                 <a href="services/carpet-cleaning.html" class="service-card">
                     <i class="fas fa-rug"></i>
-                    <h3 data-translate="services.commercial">Carpet Cleaning</h3>
-                    <p>Deep cleaning to remove stains, dirt, and allergens from carpets.</p>
+                    <h3 data-translate="services.carpet">Carpet Cleaning</h3>
+                    <p data-translate="services.descriptions.carpet">Deep cleaning to remove stains, dirt, and allergens from carpets.</p>
                 </a>
                 <a href="services/housekeeping.html" class="service-card">
                     <i class="fas fa-broom"></i>
-                    <h3>Housekeeping</h3>
-                    <p>Regular maintenance to keep your home or office spotless.</p>
+                    <h3 data-translate="services.housekeeping">Housekeeping</h3>
+                    <p data-translate="services.descriptions.housekeeping">Regular maintenance to keep your home or office spotless.</p>
                 </a>
                 <a href="services/deep-cleaning.html" class="service-card">
                     <i class="fas fa-broom"></i>
-                    <h3>Deep Cleaning</h3>
-                    <p>Intensive cleaning for every corner of your space.</p>
+                    <h3 data-translate="services.deep">Deep Cleaning</h3>
+                    <p data-translate="services.descriptions.deep">Intensive cleaning for every corner of your space.</p>
                 </a>
             </div>
         </div>
@@ -106,113 +106,117 @@
     <section class="why-us" id="why-us">
         <div class="container">
             <div class="section-title">
-                <h2>Why Choose Us</h2>
-                <p>We stand out from the competition with our exceptional service and attention to detail.</p>
+                <h2 data-translate="whyUs.title">Why Choose Us</h2>
+                <p data-translate="whyUs.subtitle">We stand out from the competition with our exceptional service and attention to detail.</p>
             </div>
             <div class="features">
                 <div class="feature">
-                    <h3>Experienced Professionals</h3>
-                    <p>Our team is trained and experienced in delivering high-quality cleaning services.</p>
+                    <h3 data-translate="whyUs.features.quality">Experienced Professionals</h3>
+                    <p data-translate="whyUs.features.qualityDesc">Our team is trained and experienced in delivering high-quality cleaning services.</p>
                 </div>
                 <div class="feature">
-                    <h3>Eco-Friendly Products</h3>
-                    <p>We use safe, non-toxic cleaning products that are effective and environmentally friendly.</p>
+                    <h3 data-translate="whyUs.features.eco">Eco-Friendly Products</h3>
+                    <p data-translate="whyUs.features.ecoDesc">We use safe, non-toxic cleaning products that are effective and environmentally friendly.</p>
                 </div>
                 <div class="feature">
-                    <h3>Flexible Scheduling</h3>
-                    <p>We work around your schedule to provide convenient service times.</p>
+                    <h3 data-translate="whyUs.features.flexible">Flexible Scheduling</h3>
+                    <p data-translate="whyUs.features.flexibleDesc">We work around your schedule to provide convenient service times.</p>
                 </div>
                 <div class="feature">
-                    <h3>100% Satisfaction</h3>
-                    <p>Your satisfaction is our priority. We guarantee you'll love the results.</p>
+                    <h3 data-translate="whyUs.features.satisfaction">100% Satisfaction</h3>
+                    <p data-translate="whyUs.features.satisfactionDesc">Your satisfaction is our priority. We guarantee you'll love the results.</p>
                 </div>
             </div>
         </div>
     </section>
 
-
-   <!-- Booking Section -->
-<section class="booking" id="booking">
-    <div class="container">
-        <div class="section-title">
-            <h2>Book Your Service</h2>
-            <p>Select an available date for your cleaning service</p>
-        </div>
-        
-        <div class="booking-container">
-            <div id="calendar"></div>
-            
-            <div class="booking-details">
-                <h3>Your Appointment Details</h3>
-                <div class="selected-date">
-                    <i class="fas fa-calendar-day"></i>
-                    <span id="selected-date">No date selected</span>
-                </div>
-                <button id="confirm-booking" class="btn" disabled>
-                    <i class="fab fa-whatsapp"></i> Confirm via WhatsApp
-                </button>
-            </div>
-        </div>
-    </div>
-</section>
-
-   <!-- Contact Section -->
-<section class="contact" id="contact">
-    <div class="container">
-        <div class="section-title">
-            <h2>Contact Us</h2>
-            <p>Get in touch with us for a free quote or to schedule a service.</p>
-        </div>
-        
-        <div class="contact-options-container">
-            <!-- Opción 1: Formulario de correo -->
-            <div class="contact-option">
-                <div class="option-header">
-                    <i class="fas fa-envelope"></i>
-                    <h3>Email Us</h3>
-                </div>
-                <form class="contact-form">
-                    <input type="text" placeholder="Your Name" required>
-                    <input type="email" placeholder="Your Email" required>
-                    <input type="text" placeholder="Subject">
-                    <textarea placeholder="Your Message" required></textarea>
-                    <button type="submit" class="btn"><i class="fas fa-paper-plane"></i> Send Message</button>
-                </form>
+    <!-- Booking Section -->
+    <section class="booking" id="booking">
+        <div class="container">
+            <div class="section-title">
+                <h2 data-translate="booking.title">Book Your Service</h2>
+                <p data-translate="booking.subtitle">Select an available date for your cleaning service</p>
             </div>
             
-            <!-- Opción 2: WhatsApp -->
-            <div class="contact-option whatsapp-option">
-                <div class="option-header">
-                    <i class="fab fa-whatsapp"></i>
-                    <h3>Chat on WhatsApp</h3>
-                </div>
-                <div class="whatsapp-info">
-                    <p>Get instant answers to your questions via WhatsApp:</p>
-                    <a href="https://wa.me/1234567890" class="btn whatsapp-btn" target="_blank">
-                        <i class="fab fa-whatsapp"></i> Start Chat
-                    </a>
-                    <p class="response-time"><i class="fas fa-clock"></i> Typical response time: 15 minutes</p>
+            <div class="booking-container">
+                <div id="calendar"></div>
+                
+                <div class="booking-details">
+                    <h3 data-translate="booking.details">Your Appointment Details</h3>
+                    <div class="selected-date">
+                        <i class="fas fa-calendar-day"></i>
+                        <span id="selected-date" data-translate="booking.selectedDate">No date selected</span>
+                    </div>
+                    <button id="confirm-booking" class="btn" disabled data-translate="btn.confirm">
+                        <i class="fab fa-whatsapp"></i> Confirm via WhatsApp
+                    </button>
                 </div>
             </div>
         </div>
-        
-        <!-- Información de contacto adicional -->
-        <div class="contact-info">
-            <div class="info-item">
-                <i class="fas fa-map-marker-alt"></i>
-                <p>123 Cleaning St, Your City</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2 data-translate="contact.title">Contact Us</h2>
+                <p data-translate="contact.subtitle">Get in touch with us for a free quote or to schedule a service.</p>
             </div>
-            <div class="info-item">
-                <i class="fas fa-phone"></i>
-                <p>(123) 456-7890</p>
+            
+            <div class="contact-options-container">
+                <!-- Opción 1: Formulario de correo -->
+                <div class="contact-option">
+                    <div class="option-header">
+                        <i class="fas fa-envelope"></i>
+                        <h3 data-translate="contact.emailTitle">Email Us</h3>
+                    </div>
+                    <form class="contact-form">
+                        <input type="text" placeholder="Your Name" data-translate="[placeholder]contact.name" required>
+                        <input type="email" placeholder="Your Email" data-translate="[placeholder]contact.email" required>
+                        <input type="text" placeholder="Subject" data-translate="[placeholder]contact.subject">
+                        <textarea placeholder="Your Message" data-translate="[placeholder]contact.message" required></textarea>
+                        <button type="submit" class="btn" data-translate="btn.sendMessage">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Opción 2: WhatsApp -->
+                <div class="contact-option whatsapp-option">
+                    <div class="option-header">
+                        <i class="fab fa-whatsapp"></i>
+                        <h3 data-translate="contact.whatsappTitle">Chat on WhatsApp</h3>
+                    </div>
+                    <div class="whatsapp-info">
+                        <p data-translate="contact.whatsappText">Get instant answers to your questions via WhatsApp:</p>
+                        <a href="https://wa.me/1234567890" class="btn whatsapp-btn" target="_blank">
+                            <i class="fab fa-whatsapp"></i> <span data-translate="btn.startChat">Start Chat</span>
+                        </a>
+                        <p class="response-time">
+                            <i class="fas fa-clock"></i> 
+                            <span data-translate="contact.responseTime">Typical response time: 15 minutes</span>
+                        </p>
+                    </div>
+                </div>
             </div>
-            <div class="info-item">
-                <i class="fas fa-clock"></i>
-                <p>Mon-Fri: 8:00 AM - 6:00 PM</p>
+            
+            <!-- Información de contacto adicional -->
+            <div class="contact-info">
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p data-translate="contact.address">123 Cleaning St, Your City</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <p data-translate="contact.phone">(123) 456-7890</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-clock"></i>
+                    <p data-translate="contact.hours">Mon-Fri: 8:00 AM - 6:00 PM</p>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <!-- Footer -->
     <footer>
@@ -223,7 +227,7 @@
                 <a href="#"><i class="fab fa-instagram"></i></a>
                 <a href="#"><i class="fab fa-linkedin-in"></i></a>
             </div>
-            <p>&copy; 2024 CleanPro. All Rights Reserved.</p>
+            <p data-translate="footer.copyright">&copy; 2024 CleanPro. All Rights Reserved.</p>
         </div>
     </footer>
 

@@ -1,0 +1,16 @@
+{
+    "nav": {
+        "home": "Inicio",
+        "services": "Servicios",
+        "whyUs": "Ventajas",
+        "contact": "Contacto"
+    },
+    "buttons": {
+        "bookNow": "Reservar Ahora",
+        "getQuote": "Obtener Cotización",
+        "sendMessage": "Enviar Mensaje"
+    },
+    "footer": {
+        "copyright": "© 2024 CleanPro. Todos los derechos reservados."
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "nav": {
+        "home": "Home",
+        "services": "Services",
+        "whyUs": "Why Us",
+        "contact": "Contact"
+    },
+    "buttons": {
+        "bookNow": "Book Now",
+        "getQuote": "Get a Free Quote",
+        "sendMessage": "Send Message"
+    },
+    "footer": {
+        "copyright": "© 2024 CleanPro. All Rights Reserved."
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "title": "Carpet Cleaning | CleanPro",
+    "carpet": {
+        "title": "Carpet Cleaning",
+        "subtitle": "Revitalize your carpets with our deep-cleaning treatment.",
+        "serviceTitle": "Carpet Cleaning Service",
+        "description": "We use steam cleaning and eco-friendly solutions to remove stains, odors, and allergens.",
+        "includedTitle": "What's Included:",
+        "features": {
+            "stain": "Stain removal",
+            "steam": "Steam cleaning",
+            "deodor": "Deodorizing",
+            "drying": "Quick drying"
+        }
+    }
+}

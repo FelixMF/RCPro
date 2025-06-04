@@ -1,0 +1,16 @@
+{
+    "title": "Limpieza de Alfombras | CleanPro",
+    "carpet": {
+        "title": "Limpieza de Alfombras",
+        "subtitle": "Revitaliza tus alfombras con nuestro tratamiento de limpieza profunda.",
+        "serviceTitle": "Servicio de Limpieza de Alfombras",
+        "description": "Utilizamos limpieza a vapor y soluciones ecológicas para eliminar manchas, olores y alérgenos.",
+        "includedTitle": "Qué Incluimos:",
+        "features": {
+            "stain": "Eliminación de manchas",
+            "steam": "Limpieza a vapor",
+            "deodor": "Desodorización",
+            "drying": "Secado rápido"
+        }
+    }
+}
