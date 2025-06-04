@@ -1,10 +1,9 @@
-// language.js
 document.addEventListener('DOMContentLoaded', function() {
-    // Elementos del DOM
+    // Configuración inicial
     const currentLanguage = document.getElementById('current-language');
-    const savedLang = localStorage.getItem('preferredLanguage') || 'en';
+    const savedLang = localStorage.getItem('preferredLanguage') || 'es'; // Cambiado a 'es' como predeterminado
     
-    
+    // Traducciones más completas
     const translations = {
         en: {
             nav: {
@@ -20,12 +19,32 @@ document.addEventListener('DOMContentLoaded', function() {
             },
             services: {
                 title: "Our Services",
-                subtitle: "We offer a wide range of cleaning services tailored to meet your needs."
+                subtitle: "We offer a wide range of cleaning services tailored to meet your needs.",
+                residential: "Residential Cleaning",
+                commercial: "Commercial Cleaning",
+                deep: "Deep Cleaning",
+                move: "Move In/Out Cleaning"
             },
-            // Agrega más secciones según necesites
+            whyUs: {
+                title: "Why Choose Us?",
+                quality: "Quality Service",
+                qualityDesc: "We use premium products and proven techniques.",
+                reliable: "Reliable Team",
+                reliableDesc: "Fully vetted and trained professionals.",
+                flexible: "Flexible Scheduling",
+                flexibleDesc: "We work around your availability."
+            },
+            contact: {
+                title: "Contact Us",
+                name: "Your Name",
+                email: "Your Email",
+                message: "Your Message",
+                send: "Send Message"
+            },
             common: {
                 bookService: "Book This Service",
-                pricing: "Pricing"
+                pricing: "Pricing",
+                learnMore: "Learn More"
             }
         },
         es: {
@@ -42,17 +61,37 @@ document.addEventListener('DOMContentLoaded', function() {
             },
             services: {
                 title: "Nuestros Servicios",
-                subtitle: "Ofrecemos una amplia gama de servicios de limpieza adaptados a tus necesidades."
+                subtitle: "Ofrecemos una amplia gama de servicios de limpieza adaptados a tus necesidades.",
+                residential: "Limpieza Residencial",
+                commercial: "Limpieza Comercial",
+                deep: "Limpieza Profunda",
+                move: "Limpieza por Mudanza"
             },
-            // Agrega más secciones según necesites
+            whyUs: {
+                title: "¿Por Qué Elegirnos?",
+                quality: "Servicio de Calidad",
+                qualityDesc: "Usamos productos premium y técnicas comprobadas.",
+                reliable: "Equipo Confiable",
+                reliableDesc: "Profesionales verificados y capacitados.",
+                flexible: "Horarios Flexibles",
+                flexibleDesc: "Nos adaptamos a tu disponibilidad."
+            },
+            contact: {
+                title: "Contáctanos",
+                name: "Tu Nombre",
+                email: "Tu Email",
+                message: "Tu Mensaje",
+                send: "Enviar Mensaje"
+            },
             common: {
                 bookService: "Reservar Este Servicio",
-                pricing: "Precios"
+                pricing: "Precios",
+                learnMore: "Saber Más"
             }
         }
     };
 
-    // Inicializar con el idioma guardado o predeterminado
+    // Inicializar con el idioma guardado
     initLanguage(savedLang);
 
     // Manejador del selector de idioma
@@ -83,43 +122,47 @@ document.addEventListener('DOMContentLoaded', function() {
         if (!t) return;
 
         // Actualizar navegación
-        const navLinks = document.querySelectorAll('.nav-links a');
-        if (navLinks.length >= 4) {
-            navLinks[0].textContent = t.nav.home;
-            navLinks[1].textContent = t.nav.services;
-            navLinks[2].textContent = t.nav.whyUs;
-            navLinks[3].textContent = t.nav.contact;
-        }
+        document.querySelectorAll('[data-translate="nav.home"]').forEach(el => el.textContent = t.nav.home);
+        document.querySelectorAll('[data-translate="nav.services"]').forEach(el => el.textContent = t.nav.services);
+        document.querySelectorAll('[data-translate="nav.whyUs"]').forEach(el => el.textContent = t.nav.whyUs);
+        document.querySelectorAll('[data-translate="nav.contact"]').forEach(el => el.textContent = t.nav.contact);
 
         // Actualizar hero section
-        const heroTitle = document.querySelector('.hero-content h1');
-        const heroText = document.querySelector('.hero-content p');
-        const heroBtn = document.querySelector('.hero-content .btn');
-        
-        if (heroTitle) heroTitle.textContent = t.hero.title;
-        if (heroText) heroText.textContent = t.hero.text;
-        if (heroBtn) heroBtn.textContent = t.hero.btn;
+        document.querySelectorAll('[data-translate="hero.title"]').forEach(el => el.textContent = t.hero.title);
+        document.querySelectorAll('[data-translate="hero.text"]').forEach(el => el.textContent = t.hero.text);
+        document.querySelectorAll('[data-translate="hero.btn"]').forEach(el => el.textContent = t.hero.btn);
 
         // Actualizar sección de servicios
-        const servicesTitle = document.querySelector('.section-title h2');
-        const servicesSubtitle = document.querySelector('.section-title p');
-        if (servicesTitle && t.services) servicesTitle.textContent = t.services.title;
-        if (servicesSubtitle && t.services) servicesSubtitle.textContent = t.services.subtitle;
+        document.querySelectorAll('[data-translate="services.title"]').forEach(el => el.textContent = t.services.title);
+        document.querySelectorAll('[data-translate="services.subtitle"]').forEach(el => el.textContent = t.services.subtitle);
+        document.querySelectorAll('[data-translate="services.residential"]').forEach(el => el.textContent = t.services.residential);
+        document.querySelectorAll('[data-translate="services.commercial"]').forEach(el => el.textContent = t.services.commercial);
+        document.querySelectorAll('[data-translate="services.deep"]').forEach(el => el.textContent = t.services.deep);
+        document.querySelectorAll('[data-translate="services.move"]').forEach(el => el.textContent = t.services.move);
 
-        // Actualizar botones y textos comunes
-        document.querySelectorAll('.btn:not(.hero-content .btn)').forEach(btn => {
-            if (btn.textContent.includes("Book")) {
-                btn.textContent = t.common.bookService;
-            }
-        });
+        // Actualizar sección "Why Us"
+        document.querySelectorAll('[data-translate="whyUs.title"]').forEach(el => el.textContent = t.whyUs.title);
+        document.querySelectorAll('[data-translate="whyUs.quality"]').forEach(el => el.textContent = t.whyUs.quality);
+        document.querySelectorAll('[data-translate="whyUs.qualityDesc"]').forEach(el => el.textContent = t.whyUs.qualityDesc);
+        document.querySelectorAll('[data-translate="whyUs.reliable"]').forEach(el => el.textContent = t.whyUs.reliable);
+        document.querySelectorAll('[data-translate="whyUs.reliableDesc"]').forEach(el => el.textContent = t.whyUs.reliableDesc);
+        document.querySelectorAll('[data-translate="whyUs.flexible"]').forEach(el => el.textContent = t.whyUs.flexible);
+        document.querySelectorAll('[data-translate="whyUs.flexibleDesc"]').forEach(el => el.textContent = t.whyUs.flexibleDesc);
 
-        document.querySelectorAll('h3').forEach(el => {
-            if (el.textContent === "Pricing") {
-                el.textContent = t.common.pricing;
-            }
-        });
+        // Actualizar sección de contacto
+        document.querySelectorAll('[data-translate="contact.title"]').forEach(el => el.textContent = t.contact.title);
+        document.querySelectorAll('[data-translate="contact.name"]').forEach(el => el.placeholder = t.contact.name);
+        document.querySelectorAll('[data-translate="contact.email"]').forEach(el => el.placeholder = t.contact.email);
+        document.querySelectorAll('[data-translate="contact.message"]').forEach(el => el.placeholder = t.contact.message);
+        document.querySelectorAll('[data-translate="contact.send"]').forEach(el => el.value = t.contact.send);
 
-        // Agrega más actualizaciones según necesites
-        console.log(`Idioma cambiado a: ${lang}`);
+        // Actualizar textos comunes
+        document.querySelectorAll('[data-translate="common.bookService"]').forEach(el => el.textContent = t.common.bookService);
+        document.querySelectorAll('[data-translate="common.pricing"]').forEach(el => el.textContent = t.common.pricing);
+        document.querySelectorAll('[data-translate="common.learnMore"]').forEach(el => el.textContent = t.common.learnMore);
+
+        // Actualizar atributos lang y dirección de texto
+        document.documentElement.lang = lang;
+        document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
     }
 });
