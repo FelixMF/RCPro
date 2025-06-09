@@ -1,0 +1,30 @@
+{
+  "title": "Limpieza Profunda | CleanPro",
+  "nav": {
+    "home": "Inicio",
+    "services": "Servicios",
+    "whyUs": "¿Por qué nosotros?",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "title": "Limpieza Profunda",
+    "text": "Limpieza intensiva para espacios que requieren atención especial.",
+    "book": "Reservar Ahora"
+  },
+  "details": {
+    "heading": "Servicio de Limpieza Profunda",
+    "description": "Una limpieza completa de arriba a abajo enfocada en áreas frecuentemente olvidadas para un espacio realmente renovado.",
+    "includedTitle": "¿Qué incluye?",
+    "items": {
+      "behindFurniture": "Detrás y debajo de los muebles",
+      "appliances": "Limpieza profunda de electrodomésticos (interior/exterior)",
+      "baseboards": "Limpieza de zócalos y rieles de ventanas",
+      "cabinets": "Organización del interior de gabinetes",
+      "grout": "Cepillado de juntas y azulejos",
+      "fixtures": "Limpieza de luminarias"
+    }
+  },
+  "footer": {
+    "copyright": "© 2024 CleanPro. Todos los derechos reservados."
+  }
+}

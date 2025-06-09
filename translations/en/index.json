@@ -1,0 +1,75 @@
+{
+  "title": "CleanPro | Professional Cleaning Services",
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "whyUs": "Why Us",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Professional Cleaning Services",
+    "text": "Delivering excellence in every clean. Transform your space with our trusted team of professionals."
+  },
+  "btn": {
+    "getQuote": "Get a Free Quote",
+    "confirm": "Confirm via WhatsApp",
+    "sendMessage": "Send Message",
+    "startChat": "Start Chat"
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "We offer a wide range of cleaning services tailored to meet your needs.",
+    "residential": "House Cleaning",
+    "descriptions": {
+      "residential": "Thorough cleaning of all living spaces, kitchens, and bathrooms.",
+      "commercial": "Professional cleaning for workplaces to maintain a healthy environment.",
+      "windows": "Crystal-clear windows for a brighter, more inviting space.",
+      "carpet": "Deep cleaning to remove stains, dirt, and allergens from carpets.",
+      "housekeeping": "Regular maintenance to keep your home or office spotless.",
+      "deep": "Intensive cleaning for every corner of your space."
+    },
+    "commercial": "Office Cleaning",
+    "windows": "Window Cleaning",
+    "carpet": "Carpet Cleaning",
+    "housekeeping": "Housekeeping",
+    "deep": "Deep Cleaning"
+  },
+  "whyUs": {
+    "title": "Why Choose Us",
+    "subtitle": "We stand out from the competition with our exceptional service and attention to detail.",
+    "features": {
+      "quality": "Experienced Professionals",
+      "qualityDesc": "Our team is trained and experienced in delivering high-quality cleaning services.",
+      "eco": "Eco-Friendly Products",
+      "ecoDesc": "We use safe, non-toxic cleaning products that are effective and environmentally friendly.",
+      "flexible": "Flexible Scheduling",
+      "flexibleDesc": "We work around your schedule to provide convenient service times.",
+      "satisfaction": "100% Satisfaction",
+      "satisfactionDesc": "Your satisfaction is our priority. We guarantee you'll love the results."
+    }
+  },
+  "booking": {
+    "title": "Book Your Service",
+    "subtitle": "Select an available date for your cleaning service",
+    "details": "Your Appointment Details",
+    "selectedDate": "No date selected"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Get in touch with us for a free quote or to schedule a service.",
+    "emailTitle": "Email Us",
+    "whatsappTitle": "Chat on WhatsApp",
+    "whatsappText": "Get instant answers to your questions via WhatsApp:",
+    "responseTime": "Typical response time: 15 minutes",
+    "address": "123 Cleaning St, Your City",
+    "phone": "(123) 456-7890",
+    "hours": "Mon-Fri: 8:00 AM - 6:00 PM",
+    "name": "Your Name",
+    "email": "Your Email",
+    "subject": "Subject",
+    "message": "Your Message"
+  },
+  "footer": {
+    "copyright": "© 2024 CleanPro. All Rights Reserved."
+  }
+}

@@ -16,7 +16,11 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional cleaning services for homes and offices. Book online today!">
+    <meta name="keywords" content="cleaning, house cleaning, office cleaning, professional cleaners">
+    <meta name="author" content="CleanPro">
     <title data-translate="title">CleanPro | Professional Cleaning Services</title>
+    <link rel="icon" href="imgs/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../styles.css">
 </head>
@@ -50,7 +54,7 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero" id="home">
+    <section class="hero" id="home" data-scroll>
         <div class="container">
             <div class="hero-content">
                 <h1 data-translate="hero.title">Professional Cleaning Services</h1>
@@ -61,7 +65,7 @@
     </section>
 
     <!-- Services Section -->
-    <section class="services" id="services">
+    <section class="services" id="services" data-scroll>
         <div class="container">
             <div class="section-title">
                 <h2 data-translate="services.title">Our Services</h2>
@@ -103,7 +107,7 @@
     </section>
 
     <!-- Why Choose Us Section -->
-    <section class="why-us" id="why-us">
+    <section class="why-us" id="why-us" data-scroll>
         <div class="container">
             <div class="section-title">
                 <h2 data-translate="whyUs.title">Why Choose Us</h2>
@@ -130,33 +134,42 @@
         </div>
     </section>
 
-    <!-- Booking Section -->
-    <section class="booking" id="booking">
-        <div class="container">
-            <div class="section-title">
-                <h2 data-translate="booking.title">Book Your Service</h2>
-                <p data-translate="booking.subtitle">Select an available date for your cleaning service</p>
+   <!-- Booking Section -->
+<section class="booking" id="booking" data-scroll>
+    <div class="container">
+        <div class="section-title">
+            <h2 data-translate="booking.title">Book Your Service</h2>
+            <p data-translate="booking.subtitle">Select an available date for your cleaning service</p>
+        </div>
+        
+        <div class="booking-container">
+            <div id="calendar" class="animated-calendar">
+                <!-- Loading state (temporal hasta que cargue FullCalendar) -->
+                <div class="calendar-loading"></div>
             </div>
             
-            <div class="booking-container">
-                <div id="calendar"></div>
+            <div class="booking-details animated-card">
+                <h3 data-translate="booking.details">Your Appointment Details</h3>
+                <div class="selected-date">
+                    <i class="fas fa-calendar-day pulse-icon"></i>
+                    <span id="selected-date" data-translate="booking.selectedDate">No date selected</span>
+                </div>
+                <button id="confirm-booking" class="btn wave-effect" disabled data-translate="btn.confirm">
+                    <i class="fab fa-whatsapp"></i> <span data-translate="btn.confirmText">Confirm via WhatsApp</span>
+                </button>
                 
-                <div class="booking-details">
-                    <h3 data-translate="booking.details">Your Appointment Details</h3>
-                    <div class="selected-date">
-                        <i class="fas fa-calendar-day"></i>
-                        <span id="selected-date" data-translate="booking.selectedDate">No date selected</span>
-                    </div>
-                    <button id="confirm-booking" class="btn" disabled data-translate="btn.confirm">
-                        <i class="fab fa-whatsapp"></i> Confirm via WhatsApp
-                    </button>
+                <!-- Feedback de confirmación (oculto inicialmente) -->
+                <div class="booking-feedback" id="booking-feedback">
+                    <i class="fas fa-check-circle"></i>
+                    <span data-translate="booking.confirmationMessage">Appointment confirmed! We'll contact you shortly.</span>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Contact Section -->
-    <section class="contact" id="contact">
+    <section class="contact" id="contact" data-scroll>
         <div class="container">
             <div class="section-title">
                 <h2 data-translate="contact.title">Contact Us</h2>
@@ -236,5 +249,6 @@
     <script src="scripts/language.js"></script>
     <script src="scripts/headerSticky.js"></script>
     <script src="scripts/booking.js"></script>
+    <script src="scripts/page-scrolling.js"></script>
 </body>
 </html>

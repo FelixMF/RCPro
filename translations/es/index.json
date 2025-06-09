@@ -1,0 +1,75 @@
+{
+  "title": "CleanPro | Servicios de Limpieza Profesional",
+  "nav": {
+    "home": "Inicio",
+    "services": "Servicios",
+    "whyUs": "¿Por qué nosotros?",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "title": "Servicios de Limpieza Profesional",
+    "text": "Ofrecemos excelencia en cada limpieza. Transforma tu espacio con nuestro equipo de confianza."
+  },
+  "btn": {
+    "getQuote": "Solicita una Cotización",
+    "confirm": "Confirmar por WhatsApp",
+    "sendMessage": "Enviar Mensaje",
+    "startChat": "Iniciar Chat"
+  },
+  "services": {
+    "title": "Nuestros Servicios",
+    "subtitle": "Ofrecemos una amplia gama de servicios de limpieza adaptados a tus necesidades.",
+    "residential": "Limpieza del Hogar",
+    "descriptions": {
+      "residential": "Limpieza a fondo de salas, cocinas y baños.",
+      "commercial": "Limpieza profesional para mantener ambientes laborales saludables.",
+      "windows": "Ventanas cristalinas para espacios más iluminados.",
+      "carpet": "Limpieza profunda para eliminar manchas y alérgenos.",
+      "housekeeping": "Mantenimiento regular para mantener tu espacio impecable.",
+      "deep": "Limpieza intensiva para cada rincón de tu espacio."
+    },
+    "commercial": "Limpieza de Oficinas",
+    "windows": "Limpieza de Ventanas",
+    "carpet": "Limpieza de Alfombras",
+    "housekeeping": "Servicio Doméstico",
+    "deep": "Limpieza Profunda"
+  },
+  "whyUs": {
+    "title": "¿Por Qué Elegirnos?",
+    "subtitle": "Nos destacamos por nuestro servicio excepcional y atención al detalle.",
+    "features": {
+      "quality": "Profesionales con Experiencia",
+      "qualityDesc": "Nuestro equipo está capacitado para ofrecer servicios de alta calidad.",
+      "eco": "Productos Ecológicos",
+      "ecoDesc": "Usamos productos seguros, no tóxicos y amigables con el medio ambiente.",
+      "flexible": "Horarios Flexibles",
+      "flexibleDesc": "Nos adaptamos a tu horario para mayor comodidad.",
+      "satisfaction": "100% Satisfacción Garantizada",
+      "satisfactionDesc": "Tu satisfacción es nuestra prioridad. Garantizamos resultados que amarás."
+    }
+  },
+  "booking": {
+    "title": "Reserva tu Servicio",
+    "subtitle": "Selecciona una fecha disponible para tu servicio de limpieza",
+    "details": "Detalles de tu Cita",
+    "selectedDate": "No se ha seleccionado fecha"
+  },
+  "contact": {
+    "title": "Contáctanos",
+    "subtitle": "Solicita una cotización gratuita o agenda un servicio.",
+    "emailTitle": "Escríbenos por Email",
+    "whatsappTitle": "Chatea por WhatsApp",
+    "whatsappText": "Resuelve tus dudas al instante vía WhatsApp:",
+    "responseTime": "Tiempo de respuesta: 15 minutos",
+    "address": "Calle de Limpieza 123, Tu Ciudad",
+    "phone": "(123) 456-7890",
+    "hours": "Lunes a Viernes: 8:00 AM - 6:00 PM",
+    "name": "Tu Nombre",
+    "email": "Tu Correo",
+    "subject": "Asunto",
+    "message": "Tu Mensaje"
+  },
+  "footer": {
+    "copyright": "© 2024 CleanPro. Todos los derechos reservados."
+  }
+}

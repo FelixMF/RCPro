@@ -98,11 +98,28 @@ nav {
     padding-top: 80px;
     min-height: 80vh; /* Altura mínima para mantener impacto visual */
     margin-top: 80px; 
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(41,128,185,0.7) 0%, rgba(52,152,219,0.7) 100%);
+    z-index: -1;
 }
 
 .hero-content h1 {
     font-size: 48px;
     margin-bottom: 20px;
+}
+
+.hero-content {
+    animation: fadeIn 1s ease-out, slideUp 0.8s ease-out;
 }
 
 .hero-content p {
@@ -121,11 +138,44 @@ nav {
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
-    transition: background-color 0.3s;
+    transition: all 0.4s;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background: rgba(255,255,255,0.5);
+    opacity: 0;
+    border-radius: 100%;
+    transform: scale(1, 1) translate(-50%);
+    transform-origin: 50% 50%;
+}
+
+.btn:hover::after {
+    animation: ripple 1s ease-out;
+}
+
+@keyframes ripple {
+    0% {
+        transform: scale(0, 0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(20, 20);
+        opacity: 0;
+    }
 }
 
 .btn:hover {
     background-color: #2980b9;
+     transform: translateY(-3px);
+    box-shadow: 0 7px 14px rgba(0,0,0,0.1);
 }
 
 /* Services Section */
@@ -166,6 +216,26 @@ nav {
     display: block; 
     text-decoration: none;
     color: inherit;
+     position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.service-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(52,152,219,0.1) 0%, rgba(52,152,219,0) 100%);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.service-card:hover::after {
+    opacity: 1;
 }
 
 .service-card:hover {
@@ -326,6 +396,67 @@ nav {
     height: 100%; /* La imagen ocupará toda la altura del contenedor */
     width: auto; /* Mantiene la proporción */
     max-width: 180px; /* Controla el ancho máximo */
+}
+
+/* Efecto de onda en botones */
+@keyframes wave {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.wave-effect {
+    animation: wave 2s infinite;
+}
+
+/* Efecto de flotación para elementos importantes */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+.floating {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Transiciones para inputs */
+.contact-form input,
+.contact-form textarea {
+    transition: all 0.3s ease;
+    border: 1px solid #ddd;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52,152,219,0.2);
+    outline: none;
+}
+
+/* Efecto de carga para el calendario */
+.calendar-loading {
+    position: relative;
+    min-height: 400px;
+    background: #f5f5f5;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.calendar-loading::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent);
+    animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
 }
 
 /*Animations*/
@@ -650,6 +781,41 @@ footer {
     font-size: 28px;
 }
 
+
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { 
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animated-card {
+    animation: fadeIn 0.8s ease-out, slideUp 0.8s ease-out;
+}
+
+.animated-calendar {
+    animation: fadeIn 1s ease-out;
+}
+
+.service-card {
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.service-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 14px 28px rgba(0,0,0,0.1), 0 10px 10px rgba(0,0,0,0.08);
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .nav-links {
@@ -685,3 +851,94 @@ footer {
         font-size: 18px;
     }
 }
+
+/* Efectos adicionales para las animaciones */
+.service-card {
+    transition: all 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transform: translateY(30px);
+    opacity: 0;
+}
+
+.feature {
+    transition: all 0.6s ease-out;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+/* Efecto parallax para el hero */
+.hero {
+    transition: transform 0.4s ease-out, opacity 0.4s ease-out;
+    will-change: transform;
+}
+
+/* Imágenes con efecto de escala */
+img:not(.logo-img) {
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    transform-origin: center;
+}
+
+/* Transición para elementos internos */
+.section-title h2,
+.section-title p {
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+/* Efecto de resaltado para secciones */
+section {
+    transition: box-shadow 0.5s ease-out;
+}
+
+/* Animaciones al hacer scroll */
+[data-scroll] {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+[data-scroll].animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Retrasos para cada sección */
+.hero[data-scroll] {
+    transition-delay: 0.1s;
+}
+
+.services[data-scroll] {
+    transition-delay: 0.2s;
+}
+
+.why-us[data-scroll] {
+    transition-delay: 0.3s;
+}
+
+.booking[data-scroll] {
+    transition-delay: 0.4s;
+}
+
+.contact[data-scroll] {
+    transition-delay: 0.5s;
+}
+
+/* Efecto adicional para las tarjetas de servicios */
+.service-card {
+    transition: all 0.6s ease-out;
+    transform: translateY(20px);
+    opacity: 0;
+}
+
+.service-card.animate {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Retrasos escalonados para las tarjetas */
+.service-card:nth-child(1) { transition-delay: 0.3s; }
+.service-card:nth-child(2) { transition-delay: 0.4s; }
+.service-card:nth-child(3) { transition-delay: 0.5s; }
+.service-card:nth-child(4) { transition-delay: 0.6s; }
+.service-card:nth-child(5) { transition-delay: 0.7s; }
+.service-card:nth-child(6) { transition-delay: 0.8s; }

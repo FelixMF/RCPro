@@ -1,0 +1,30 @@
+{
+  "title": "Deep Cleaning | CleanPro",
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "whyUs": "Why Us",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Deep Cleaning",
+    "text": "Intensive cleaning for spaces that need extra attention.",
+    "book": "Book Now"
+  },
+  "details": {
+    "heading": "Deep Cleaning Service",
+    "description": "A thorough top-to-bottom cleaning targeting often-neglected areas for a truly refreshed space.",
+    "includedTitle": "What's Included:",
+    "items": {
+      "behindFurniture": "Behind and under furniture",
+      "appliances": "Appliance deep cleaning (inside/outside)",
+      "baseboards": "Baseboard and window track cleaning",
+      "cabinets": "Cabinet interior organization",
+      "grout": "Grout and tile scrubbing",
+      "fixtures": "Light fixture dusting"
+    }
+  },
+  "footer": {
+    "copyright": "© 2024 CleanPro. All Rights Reserved."
+  }
+}
