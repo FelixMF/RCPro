@@ -54,7 +54,7 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero" id="home" data-scroll>
+    <section class="hero" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.pexels.com/photos/17041922/pexels-photo-17041922.jpeg');" id="home" data-scroll>
         <div class="container">
             <div class="hero-content">
                 <h1 data-translate="hero.title">Professional Cleaning Services</h1>
@@ -166,6 +166,21 @@
             </div>
         </div>
     </div>
+
+
+    <div id="booking-modal" class="modal hidden">
+  <div class="modal-content">
+    <h2>Confirmar Reserva</h2>
+    <label for="customerName">Nombre completo:</label>
+    <input type="text" id="customerName" placeholder="Ingrese su nombre completo" />
+    <label for="customerPhone">Número de contacto:</label>
+    <input type="tel" id="customerPhone" placeholder="Ej: 0991234567" />
+    <div class="modal-buttons">
+      <button id="cancelBtn">Cancelar</button>
+      <button id="submitBtn">Confirmar</button>
+    </div>
+  </div>
+</div>
 </section>
 
     <!-- Contact Section -->

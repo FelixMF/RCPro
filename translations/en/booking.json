@@ -1,0 +1,7 @@
+{
+  "alerts": {
+    "name_required": "Please enter your full name.",
+    "contact_required": "Please enter your contact number.",
+    "booking_success": "Booking successful! We'll contact you soon."
+  }
+}

@@ -215,59 +215,79 @@ document.addEventListener('DOMContentLoaded', async function() {
 
         // 10. Manejar la confirmación de reserva con animaciones
         confirmBtn.addEventListener('click', async function() {
-            if (!selectedDate) return;
-            
-            const customerName = prompt("Por favor ingrese su nombre completo:");
-            if (!customerName) return;
+           if (!selectedDate) return;
 
-            const customerPhone = prompt("Ingrese su número de contacto (ej: 0991234567):");
-            if (!customerPhone) return;
+    // Mostrar modal
+    document.getElementById('booking-modal').classList.remove('hidden');
 
-            // Formatear fecha
-            const formattedDate = new Date(selectedDate).toLocaleDateString('es-ES', {
-                weekday: 'long',
-                year: 'numeric',
-                month: 'long',
-                day: 'numeric'
-            });
+    // Limpiar inputs
+    document.getElementById('customerName').value = '';
+    document.getElementById('customerPhone').value = '';
+    document.getElementById('customerName').focus();
+});
 
-            try {
-                // Mostrar feedback de carga
-                showFeedback('Procesando su reserva...', 'info');
-                
-                // Guardar en Firestore
-                const docRef = await db.collection('appointments').add({
-                    date: selectedDate,
-                    customerName,
-                    customerPhone: customerPhone.replace(/\D/g, ''),
-                    status: 'pending',
-                    createdAt: firebase.firestore.FieldValue.serverTimestamp(),
-                    notified: false
-                });
+// Cancelar y cerrar modal
+document.getElementById('cancelBtn').addEventListener('click', function () {
+    document.getElementById('booking-modal').classList.add('hidden');
+});
 
-                // Crear mensaje estructurado
-                const message = `*${COMPANY_NAME} - Nueva Reserva*%0A%0A` +
-                                `📅 *Fecha:* ${formattedDate}%0A` +
-                                `👤 *Cliente:* ${customerName}%0A` +
-                                `📱 *Teléfono:* ${customerPhone}%0A` +
-                                `🔖 *ID Reserva:* ${docRef.id}%0A%0A` +
-                                `_Por favor confirme esta reserva_`;
+// Confirmar reserva desde modal
+document.getElementById('submitBtn').addEventListener('click', async function () {
+    const customerName = document.getElementById('customerName').value.trim();
+    const customerPhone = document.getElementById('customerPhone').value.trim();
 
-                // Abrir WhatsApp
-                openWhatsApp(COMPANY_PHONE, message);
-                
-                // Actualizar UI
-                bookedDates.push(selectedDate);
-                calendar.refetchEvents();
-                confirmBtn.disabled = true;
-                
-                // Mostrar feedback de éxito
-                showFeedback('¡Reserva registrada con éxito! Se abrirá WhatsApp para confirmación.', 'success');
-                
-            } catch (error) {
-                console.error("Error al guardar reserva:", error);
-                showFeedback("Ocurrió un error al guardar la reserva. Por favor intente nuevamente.", 'error');
-            }
+    if (!customerName) {
+        alert("Por favor ingrese su nombre completo.");
+        document.getElementById('customerName').focus();
+        return;
+    }
+
+    if (!customerPhone) {
+        alert("Por favor ingrese su número de contacto.");
+        document.getElementById('customerPhone').focus();
+        return;
+    }
+
+    document.getElementById('booking-modal').classList.add('hidden');
+
+    const formattedDate = new Date(selectedDate).toLocaleDateString('es-ES', {
+        weekday: 'long',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+    });
+
+    try {
+        showFeedback('Procesando su reserva...', 'info');
+
+        const docRef = await db.collection('appointments').add({
+            date: selectedDate,
+            customerName,
+            customerPhone: customerPhone.replace(/\D/g, ''),
+            status: 'pending',
+            createdAt: firebase.firestore.FieldValue.serverTimestamp(),
+            notified: false
+        });
+
+        const message = `*${COMPANY_NAME} - Confirmación de Nueva Reserva*%0A%0A` +
+                `🗓️ *Fecha de la Reserva:* ${formattedDate}%0A` +
+                `👤 *Nombre del Cliente:* ${customerName}%0A` +
+                `📞 *Teléfono de Contacto:* ${customerPhone}%0A` +
+                `🆔 *ID de Reserva:* ${docRef.id}%0A%0A` +
+                `_Le agradecemos confirmar esta reserva a la brevedad. Quedamos atentos a su respuesta._`;
+
+        openWhatsApp(COMPANY_PHONE, message);
+
+        bookedDates.push(selectedDate);
+        calendar.refetchEvents();
+        confirmBtn.disabled = true;
+
+        showFeedback('¡Reserva registrada con éxito! Se abrirá WhatsApp para confirmación.', 'success');
+
+    } catch (error) {
+        console.error("Error al guardar reserva:", error);
+        showFeedback("Ocurrió un error al guardar la reserva. Por favor intente nuevamente.", 'error');
+    }
         });
 
         // 11. Estilos CSS dinámicos con animaciones

@@ -1,48 +1,94 @@
-// Animaciones al hacer scroll
+// Animaciones al hacer scroll - Versión Mejorada
 document.addEventListener('DOMContentLoaded', function() {
-    // Configuración del Intersection Observer
+    // Configuración mejorada del Observer
     const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
+        threshold: 0.15, // Aumentamos el threshold
+        rootMargin: '0px 0px -100px 0px' // Más margen negativo
     };
 
-    // Función para manejar las intersecciones
     const observerCallback = (entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                // Animación para la sección principal
-                entry.target.classList.add('animate');
+                const section = entry.target;
                 
-                // Animación especial para las tarjetas de servicios
-                if (entry.target.classList.contains('services')) {
-                    const serviceCards = entry.target.querySelectorAll('.service-card');
-                    serviceCards.forEach(card => {
-                        setTimeout(() => {
-                            card.classList.add('animate');
-                        }, 100);
-                    });
+                // Animación principal para la sección
+                section.classList.add('animate');
+                
+                // Animaciones específicas para cada sección
+                if (section.classList.contains('services')) {
+                    animateServiceCards(section);
+                } else if (section.id === 'why-us') {
+                    animateWhyUsFeatures(section);
                 }
                 
-                // Opcional: dejar de observar después de la animación
-                // observer.unobserve(entry.target);
+                console.log(`Sección animada: ${section.id || section.className}`);
             }
         });
     };
 
-    // Crear el observer
+    // Función para animar las tarjetas de servicios
+    function animateServiceCards(section) {
+        const serviceCards = section.querySelectorAll('.service-card');
+        serviceCards.forEach((card, index) => {
+            setTimeout(() => {
+                card.classList.add('animate');
+            }, index * 100 + 200);
+        });
+    }
+
+    // Función específica para Why Choose Us
+    function animateWhyUsFeatures(section) {
+        const features = section.querySelectorAll('.feature');
+        features.forEach((feature, index) => {
+            setTimeout(() => {
+                feature.classList.add('animate');
+            }, index * 150 + 300);
+        });
+        
+        // Forzar display del container si es necesario
+        const container = section.querySelector('.container');
+        if (container) {
+            container.style.display = 'block';
+            container.style.opacity = '1';
+        }
+    }
+
+    // Crear e inicializar el observer
     const observer = new IntersectionObserver(observerCallback, observerOptions);
 
-    // Observar todas las secciones con data-scroll
+    // Configuración inicial para secciones
     const scrollSections = document.querySelectorAll('[data-scroll]');
     scrollSections.forEach(section => {
+        // Configuración inicial para asegurar visibilidad
+        section.style.opacity = '1';
+        section.style.transform = 'none';
+        
+        // Configuración específica para why-us
+        if (section.id === 'why-us') {
+            const features = section.querySelectorAll('.feature');
+            features.forEach(feature => {
+                feature.style.opacity = '0';
+                feature.style.transform = 'translateY(20px)';
+                feature.style.transition = 'all 0.6s ease-out';
+            });
+        }
+        
         observer.observe(section);
     });
 
-    // Opcional: Animación inicial para el hero sin esperar scroll
+    // Animación inicial para el hero
     const heroSection = document.querySelector('.hero');
     if (heroSection) {
         setTimeout(() => {
             heroSection.classList.add('animate');
-        }, 300);
+        }, 500);
     }
+
+    // Debugging
+    /*console.log('Total secciones observadas:', scrollSections.length);
+    const whyUsSection = document.getElementById('why-us');
+    if (whyUsSection) {
+        console.log('Why Us section encontrada, features:', 
+            whyUsSection.querySelectorAll('.feature').length);
+    }*/
 });

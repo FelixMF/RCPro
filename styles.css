@@ -87,7 +87,7 @@ nav {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    /*background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));*/
     background-size: cover;
     background-position: center;
     height: auto;
@@ -100,6 +100,8 @@ nav {
     margin-top: 80px; 
     position: relative;
     overflow: hidden;
+    transition: transform 0.4s ease-out, opacity 0.4s ease-out;
+    will-change: transform;
 }
 
 .hero::before {
@@ -109,7 +111,6 @@ nav {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(41,128,185,0.7) 0%, rgba(52,152,219,0.7) 100%);
     z-index: -1;
 }
 
@@ -241,6 +242,7 @@ nav {
 .service-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 14px 28px rgba(0,0,0,0.1), 0 10px 10px rgba(0,0,0,0.08);
 }
 
 .service-card i {
@@ -256,92 +258,118 @@ nav {
 }
 
 
-/*Services Pages*/
-/* Service Details Section */
+/* Services Pages */
 .service-details {
-    padding: 80px 0;
-    background: #fff;
+    padding: 80px 20px;
+    background: linear-gradient(to bottom, #fdfdfd 0%, #f3f4f6 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.service-details::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
+    opacity: 0.05;
+    z-index: 0;
+    filter: blur(3px);
 }
 
 .details-content {
     display: grid;
-    grid-template-columns: 1fr 350px;
-    gap: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.description {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    border: 1px solid #e5e7eb;
+}
+
+.description:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.1);
 }
 
 .description h2 {
     font-size: 32px;
-    color: #2c3e50;
+    color: #1f2937;
     margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 12px;
+}
+
+.description h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: #3b82f6;
+    border-radius: 2px;
 }
 
 .description h3 {
-    font-size: 24px;
+    font-size: 22px;
     margin: 30px 0 15px;
-    color: #2c3e50;
+    color: #374151;
+    position: relative;
+    padding-left: 18px;
+}
+
+.description h3::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 60%;
+    width: 4px;
+    background: #3b82f6;
+    border-radius: 2px;
 }
 
 .description ul {
     list-style: none;
+    margin-top: 25px;
+    padding: 0;
 }
 
 .description li {
-    margin-bottom: 10px;
-    padding-left: 25px;
+    margin-bottom: 16px;
+    padding-left: 34px;
     position: relative;
+    line-height: 1.6;
+    font-size: 16px;
+    color: #4b5563;
 }
 
 .description li i {
-    color: #3498db;
+    color: #3b82f6;
     position: absolute;
     left: 0;
-    top: 5px;
-}
-
-/* Pricing Box */
-.pricing-box {
-    background: #f9f9f9;
-    border-radius: 8px;
-    padding: 25px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    margin-bottom: 20px;
-}
-
-.pricing-box h3 {
-    font-size: 22px;
-    margin-bottom: 20px;
-    text-align: center;
-    color: #2c3e50;
-}
-
-.price-option {
-    margin-bottom: 20px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid #eee;
-}
-
-.price-option.highlighted {
-    background: #e3f2fd;
-    margin: -15px;
-    padding: 15px;
-    border-radius: 8px;
-}
-
-.price-option h4 {
-    font-size: 18px;
-    color: #3498db;
-}
-
-.price-option .price {
-    font-size: 28px;
-    font-weight: bold;
-    margin: 10px 0;
-}
-
-.price-option .price span {
+    top: 4px;
     font-size: 16px;
-    font-weight: normal;
-    color: #7f8c8d;
+    background: rgba(59, 130, 246, 0.1);
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /*Idiomas*/
@@ -484,23 +512,118 @@ nav {
 }
 
 /* Why Choose Us */
+/* Why Choose Us Section - Versión Corregida */
 .why-us {
     padding: 80px 0;
     background-color: #f1f5f9;
+    opacity: 1; /* Forzar visibilidad inicial */
+    transform: none; /* Resetear transform */
+}
+
+.why-us .container {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+}
+
+/* Animaciones solo para elementos internos */
+.why-us[data-scroll] .section-title h2,
+.why-us[data-scroll] .section-title p,
+.why-us[data-scroll] .feature {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-out;
+}
+
+.why-us.animate {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .features {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
+    margin-top: 40px;
 }
 
 .feature {
     background-color: #fff;
     padding: 30px;
-    border-radius: 5px;
+    border-radius: 8px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
 }
+
+/* Elimina cualquier otra definición contradictoria de .feature */
+.why-us .feature.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.why-us.animate .section-title h2,
+.why-us.animate .section-title p,
+.why-us.animate .feature {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Reset y estilos garantizados para las features */
+#why-us .features {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
+    gap: 30px !important;
+    margin-top: 40px !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+#why-us .feature {
+    background: white !important;
+    padding: 30px !important;
+    border-radius: 8px !important;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05) !important;
+    opacity: 1 !important;
+    transform: none !important;
+    display: block !important;
+    visibility: visible !important;
+    height: auto !important;
+}
+
+/* Eliminar cualquier efecto de animación que pueda estar ocultando las features */
+#why-us .feature[data-scroll],
+#why-us .feature.animate {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+    transition: none !important;
+}
+
+/* Retrasos escalonados */
+.why-us.animate .section-title h2 { transition-delay: 0.2s; }
+.why-us.animate .section-title p { transition-delay: 0.3s; }
+.why-us.animate .feature:nth-child(1) { transition-delay: 0.4s; }
+.why-us.animate .feature:nth-child(2) { transition-delay: 0.5s; }
+.why-us.animate .feature:nth-child(3) { transition-delay: 0.6s; }
+.why-us.animate .feature:nth-child(4) { transition-delay: 0.7s; }
+
+
+/* Retrasos escalonados para las features */
+.why-us .feature:nth-child(1) { transition-delay: 0.3s; }
+.why-us .feature:nth-child(2) { transition-delay: 0.5s; }
+.why-us .feature:nth-child(3) { transition-delay: 0.7s; }
+.why-us .feature:nth-child(4) { transition-delay: 0.9s; }
+
+/* Asegurar que los títulos sean visibles */
+.why-us .section-title h2,
+.why-us .section-title p {
+    opacity: 1 !important;
+    transform: none !important;
+}
+
+
 
 .feature h3 {
     font-size: 22px;
@@ -751,11 +874,12 @@ footer {
     color: #3498db;
 }
 
-/* Páginas de servicios */
+/* Páginas de servicios 
 .service-details {
     padding: 80px 0;
     background: #fff;
 }
+    */
 
 .service-details .container {
     max-width: 800px;
@@ -807,14 +931,6 @@ footer {
     animation: fadeIn 1s ease-out;
 }
 
-.service-card {
-    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-}
-
-.service-card:hover {
-    transform: translateY(-10px) scale(1.02);
-    box-shadow: 0 14px 28px rgba(0,0,0,0.1), 0 10px 10px rgba(0,0,0,0.08);
-}
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -863,13 +979,12 @@ footer {
     transition: all 0.6s ease-out;
     opacity: 0;
     transform: translateY(20px);
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
-/* Efecto parallax para el hero */
-.hero {
-    transition: transform 0.4s ease-out, opacity 0.4s ease-out;
-    will-change: transform;
-}
 
 /* Imágenes con efecto de escala */
 img:not(.logo-img) {
@@ -889,6 +1004,8 @@ img:not(.logo-img) {
 section {
     transition: box-shadow 0.5s ease-out;
 }
+
+
 
 /* Animaciones al hacer scroll */
 [data-scroll] {
@@ -933,6 +1050,121 @@ section {
 .service-card.animate {
     transform: translateY(0);
     opacity: 1;
+}
+
+
+/* Reset garantizado para títulos */
+.section-title,
+.section-title * {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    animation: none !important;
+    transition: none !important;
+    display: block !important;
+}
+
+/* Estilos específicos para títulos */
+.section-title h2 {
+    font-size: 36px;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.section-title p {
+    color: #7f8c8d;
+    max-width: 700px;
+    margin: 0 auto 30px;
+    text-align: center;
+}
+
+/* Reset para títulos en booking y contact */
+#booking .section-title,
+#contact .section-title {
+    display: block !important;
+    opacity: 1 !important;
+}
+
+#booking .section-title h2,
+#booking .section-title p,
+#contact .section-title h2,
+#contact .section-title p {
+    opacity: 1 !important;
+    transform: none !important;
+}
+
+
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px 30px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  text-align: left;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.modal-content label {
+  display: block;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 8px 10px;
+  margin-top: 5px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.modal-buttons {
+  margin-top: 20px;
+  text-align: right;
+}
+
+.modal-buttons button {
+  padding: 8px 16px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+#cancelBtn {
+  background-color: #bbb;
+  color: #333;
+}
+
+#submitBtn {
+  background-color: #25d366;
+  color: white;
 }
 
 /* Retrasos escalonados para las tarjetas */

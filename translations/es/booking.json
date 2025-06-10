@@ -1,0 +1,7 @@
+{
+  "alerts": {
+    "name_required": "Por favor ingresa tu nombre completo.",
+    "contact_required": "Por favor ingresa tu número de contacto.",
+    "booking_success": "¡Reserva exitosa! Te contactaremos pronto."
+  }
+}
