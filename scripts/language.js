@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', async function() {
 
     async function loadTranslationFile(lang, file) {
         try {
-            const response = await fetch(`../translations/${lang}/${file}.json`);
+            const response = await fetch(`/RCPro/translations/${lang}/${file}.json`);
             if (!response.ok) throw new Error(`No se pudo cargar: ${lang}/${file}.json`);
             
             const data = await response.json();
