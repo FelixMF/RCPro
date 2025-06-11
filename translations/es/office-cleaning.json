@@ -1,0 +1,27 @@
+{
+    "title": "Limpieza de Oficinas | CleanPro",
+    "office": {
+        "title": "Limpieza de Oficinas",
+        "subtitle": "Limpieza profesional para un espacio de trabajo productivo y saludable.",
+        "serviceTitle": "Servicio de Limpieza de Oficinas",
+        "description": "Nos especializamos en mantener entornos laborales limpios y desinfectados, adaptados a empresas de todos los tamaños.",
+        "includedTitle": "¿Qué incluye?",
+        "features": {
+            "desks": "Desinfección de escritorios y superficies",
+            "floors": "Aspirado y trapeado de pisos",
+            "restrooms": "Sanitización de baños",
+            "trash": "Eliminación de basura y reciclaje",
+            "windows": "Limpieza de ventanas y cristales"
+        }
+    },
+    "nav": {
+        "home": "Inicio",
+        "services": "Servicios",
+        "whyUs": "Por Qué Nosotros",
+        "contact": "Contacto"
+    },
+    "bookNow": "Reservar Ahora",
+    "footer": {
+        "rights": "Todos los derechos reservados."
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "title": "Limpieza del Hogar | CleanPro",
+    "house": {
+        "title": "Limpieza del Hogar",
+        "subtitle": "Nuestro equipo ofrece una limpieza minuciosa en cada habitación, garantizando un ambiente fresco y saludable.",
+        "serviceTitle": "Servicio de Limpieza del Hogar",
+        "description": "Nuestro equipo ofrece una limpieza minuciosa en cada habitación, garantizando un ambiente fresco y saludable.",
+        "includedTitle": "¿Qué incluye?",
+        "features": {
+            "dusting": "Sacudido y pulido de todas las superficies",
+            "kitchen": "Limpieza profunda de la cocina (incluidos los electrodomésticos)",
+            "bathroom": "Desinfección del baño",
+            "floors": "Aspirado y trapeado de pisos",
+            "windows": "Limpieza de ventanas (interior)"
+        }
+    }
+}

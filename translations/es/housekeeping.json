@@ -1,0 +1,28 @@
+{
+  "title": "Housekeeping | CleanPro",
+  "nav": {
+    "home": "Inicio",
+    "services": "Servicios",
+    "whyUs": "Por Qué Nosotros",
+    "contact": "Contacto"
+  },
+  "housekeeping": {
+    "title": "Housekeeping",
+    "subtitle": "Mantenimiento regular para mantener tu espacio limpio y organizado.",
+    "serviceTitle": "Servicio de Housekeeping",
+    "description": "Nuestro mantenimiento rutinario asegura que tu hogar u oficina permanezca siempre limpio y acogedor.",
+    "includedTitle": "Qué Incluye:",
+    "features": {
+      "schedule": "Limpiezas diarias/semanales programadas",
+      "dusting": "Desempolvado y desinfección de superficies",
+      "floorCare": "Cuidado de pisos (aspirado/fregado)",
+      "bathroom": "Refrescamiento del baño",
+      "bedMaking": "Arreglo de camas y cambio de sábanas",
+      "kitchen": "Orden en la cocina"
+    }
+  },
+  "bookNow": "Reservar Ahora",
+  "footer": {
+    "rights": "Todos los derechos reservados."
+  }
+}

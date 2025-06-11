@@ -1,47 +1,52 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Housekeeping | CleanPro</title>
-    <link rel="stylesheet" href="../styles.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-translate="title">Housekeeping | CleanPro</title>
+    <link rel="stylesheet" href="../styles.css" />
 </head>
 <body>
     <!-- Header -->
     <header class="header-transparent">
-    <div class="container">
-        <nav>
-            <div class="logo">
-            <img src="../imgs/Logo RCPro.PNG" alt="CleanPro Logo" class="logo-img">
-            </div>
-            <ul class="nav-links">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="../index.html#services">Services</a></li>
-                <li><a href="../index.html#why-us">Why Us</a></li>
-                <li><a href="../index.html#contact">Contact</a></li>
-                <!-- Selector de idioma -->
-                <li class="language-switcher">
-                    <span id="current-language">EN</span>
-                    <ul class="language-dropdown">
-                        <li><a href="#" data-lang="en">English</a></li>
-                        <li><a href="#" data-lang="es">Español</a></li>
-                    </ul>
-                </li>
-            </ul>
-            <div class="menu-toggle">
-                <i class="fas fa-bars"></i>
-            </div>
-        </nav>
-    </div>
-</header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <a class="logo" href="../index.html">
+                    <img src="../imgs/Logo RCPro.PNG" alt="CleanPro Logo" class="logo-img">
+                    </a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="../index.html" data-translate="nav.home">Home</a></li>
+                    <li><a href="../index.html#services" data-translate="nav.services">Services</a></li>
+                    <li><a href="../index.html#why-us" data-translate="nav.whyUs">Why Us</a></li>
+                    <li><a href="../index.html#contact" data-translate="nav.contact">Contact</a></li>
+                    <!-- Selector de idioma -->
+                    <li class="language-switcher">
+                        <span id="current-language">EN</span>
+                        <ul class="language-dropdown">
+                            <li><a href="#" data-lang="en">English</a></li>
+                            <li><a href="#" data-lang="es">Español</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
 
     <!-- Hero -->
-    <section class="hero" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');">
+    <section
+        class="hero"
+        style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');"
+    >
         <div class="container">
             <div class="hero-content">
-                <h1>Housekeeping</h1>
-                <p>Regular maintenance to keep your space pristine and organized.</p>
-                <a href="../index.html#contact" class="btn">Book Now</a>
+                <h1 data-translate="housekeeping.title">Housekeeping</h1>
+                <p data-translate="housekeeping.subtitle">Regular maintenance to keep your space pristine and organized.</p>
+                <a href="../index.html#contact" class="btn" data-translate="bookNow">Book Now</a>
             </div>
         </div>
     </section>
@@ -51,34 +56,34 @@
         <div class="container">
             <div class="details-content">
                 <div class="description">
-                    <h2>Housekeeping Service</h2>
-                    <p>Our routine maintenance ensures your home or office remains consistently clean and welcoming.</p>
-                    
-                    <h3>What's Included:</h3>
+                    <h2 data-translate="housekeeping.serviceTitle">Housekeeping Service</h2>
+                    <p data-translate="housekeeping.description">
+                        Our routine maintenance ensures your home or office remains consistently clean and welcoming.
+                    </p>
+
+                    <h3 data-translate="housekeeping.includedTitle">What's Included:</h3>
                     <ul>
-                        <li><i class="fas fa-check"></i> Daily/weekly cleaning schedules</li>
-                        <li><i class="fas fa-check"></i> Surface dusting and sanitizing</li>
-                        <li><i class="fas fa-check"></i> Floor care (vacuuming/mopping)</li>
-                        <li><i class="fas fa-check"></i> Bathroom refresh</li>
-                        <li><i class="fas fa-check"></i> Bed making and linen changes</li>
-                        <li><i class="fas fa-check"></i> Kitchen tidying</li>
+                        <li><i class="fas fa-check"></i> <span data-translate="housekeeping.features.schedule">Daily/weekly cleaning schedules</span></li>
+                        <li><i class="fas fa-check"></i> <span data-translate="housekeeping.features.dusting">Surface dusting and sanitizing</span></li>
+                        <li><i class="fas fa-check"></i> <span data-translate="housekeeping.features.floorCare">Floor care (vacuuming/mopping)</span></li>
+                        <li><i class="fas fa-check"></i> <span data-translate="housekeeping.features.bathroom">Bathroom refresh</span></li>
+                        <li><i class="fas fa-check"></i> <span data-translate="housekeeping.features.bedMaking">Bed making and linen changes</span></li>
+                        <li><i class="fas fa-check"></i> <span data-translate="housekeeping.features.kitchen">Kitchen tidying</span></li>
                     </ul>
                 </div>
-
-                
             </div>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="social-links">
                 <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
                 <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
             </div>
-            <p>&copy; 2024 CleanPro. All Rights Reserved.</p>
+            <p>&copy; 2025 CleanPro. <span data-translate="footer.rights">All Rights Reserved.</span></p>
         </div>
     </footer>
 

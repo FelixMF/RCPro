@@ -54,6 +54,21 @@
     "details": "Detalles de tu Cita",
     "selectedDate": "No se ha seleccionado fecha"
   },
+  "bookingModal": {
+    "title": "Confirmar Reserva",
+    "labels": {
+      "customerName": "Nombre completo:",
+      "customerPhone": "Número de contacto:"
+    },
+    "placeholders": {
+      "customerName": "Ingrese su nombre completo",
+      "customerPhone": "Ej: 0991234567"
+    },
+    "buttons": {
+      "cancel": "Cancelar",
+      "confirm": "Confirmar"
+    }
+  },
   "contact": {
     "title": "Contáctanos",
     "subtitle": "Solicita una cotización gratuita o agenda un servicio.",

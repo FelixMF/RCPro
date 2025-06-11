@@ -1,0 +1,27 @@
+{
+    "title": "Office Cleaning | CleanPro",
+    "office": {
+        "title": "Office Cleaning",
+        "subtitle": "Professional cleaning for a productive and healthy workspace.",
+        "serviceTitle": "Office Cleaning Service",
+        "description": "We specialize in maintaining clean and sanitized work environments, tailored for businesses of all sizes.",
+        "includedTitle": "What's Included:",
+        "features": {
+            "desks": "Desk and surface disinfection",
+            "floors": "Vacuuming and mopping floors",
+            "restrooms": "Restroom sanitization",
+            "trash": "Trash removal and recycling",
+            "windows": "Window and glass cleaning"
+        }
+    },
+    "nav": {
+        "home": "Home",
+        "services": "Services",
+        "whyUs": "Why Us",
+        "contact": "Contact"
+    },
+    "bookNow": "Book Now",
+    "footer": {
+        "rights": "All Rights Reserved."
+    }
+}

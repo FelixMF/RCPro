@@ -1,82 +1,87 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Window Cleaning | CleanPro</title>
-    <link rel="stylesheet" href="../styles.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-translate="title">Window Cleaning | CleanPro</title>
+    <link rel="stylesheet" href="../styles.css" />
 </head>
 <body>
     <!-- Header -->
     <header class="header-transparent">
-    <div class="container">
-        <nav>
-            <div class="logo">
-            <img src="../imgs/Logo RCPro.PNG" alt="CleanPro Logo" class="logo-img">
-            </div>
-            <ul class="nav-links">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="../index.html#services">Services</a></li>
-                <li><a href="../index.html#why-us">Why Us</a></li>
-                <li><a href="../index.html#contact">Contact</a></li>
-                <!-- Selector de idioma -->
-                <li class="language-switcher">
-                    <span id="current-language">EN</span>
-                    <ul class="language-dropdown">
-                        <li><a href="#" data-lang="en">English</a></li>
-                        <li><a href="#" data-lang="es">Español</a></li>
-                    </ul>
-                </li>
-            </ul>
-            <div class="menu-toggle">
-                <i class="fas fa-bars"></i>
-            </div>
-        </nav>
-    </div>
-</header>
-
-<!-- Hero -->
-<section class="hero" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1598908328042-efd8982f07d1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80https://images.unsplash.com/photo-1585088928729-fd6cfa0b784b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');">
-    <div class="container">
-        <div class="hero-content">
-            <h1>Window Cleaning</h1>
-            <p>Crystal-clear windows for a brighter view.</p>
-            <a href="../index.html#contact" class="btn">Book Now</a>
-        </div>
-    </div>
-</section>
-
-<!-- Service Details -->
-<section class="service-details">
-    <div class="container">
-        <div class="details-content">
-            <div class="description">
-                <h2>Window Cleaning Service</h2>
-                <p>We remove streaks, dust, and grime from all types of windows, both interior and exterior.</p>
-                
-                <h3>What's Included:</h3>
-                <ul>
-                    <li><i class="fas fa-check"></i> Interior window cleaning</li>
-                    <li><i class="fas fa-check"></i> Exterior window washing</li>
-                    <li><i class="fas fa-check"></i> Frame and sill cleaning</li>
-                    <li><i class="fas fa-check"></i> Glass polishing</li>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <a class="logo" href="../index.html">
+                    <img src="../imgs/Logo RCPro.PNG" alt="CleanPro Logo" class="logo-img">
+                    </a>
+                </div>  
+                <ul class="nav-links">
+                    <li><a href="../index.html" data-translate="nav.home">Home</a></li>
+                    <li><a href="../index.html#services" data-translate="nav.services">Services</a></li>
+                    <li><a href="../index.html#why-us" data-translate="nav.whyUs">Why Us</a></li>
+                    <li><a href="../index.html#contact" data-translate="nav.contact">Contact</a></li>
+                    <!-- Selector de idioma -->
+                    <li class="language-switcher">
+                        <span id="current-language">EN</span>
+                        <ul class="language-dropdown">
+                            <li><a href="#" data-lang="en">English</a></li>
+                            <li><a href="#" data-lang="es">Español</a></li>
+                        </ul>
+                    </li>
                 </ul>
-            </div>
-
-           
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
         </div>
-    </div>
-</section>
+    </header>
 
+    <!-- Hero -->
+    <section
+        class="hero"
+        style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../imgs/Window-cleaning.webp');"
+    >
+        <div class="container">
+            <div class="hero-content">
+                <h1 data-translate="window.title">Window Cleaning</h1>
+                <p data-translate="window.subtitle">Crystal-clear windows for a brighter view.</p>
+                <a href="../index.html#contact" class="btn" data-translate="bookNow">Book Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Details -->
+    <section class="service-details">
+        <div class="container">
+            <div class="details-content">
+                <div class="description">
+                    <h2 data-translate="window.serviceTitle">Window Cleaning Service</h2>
+                    <p data-translate="window.description">
+                        We remove streaks, dust, and grime from all types of windows, both interior and exterior.
+                    </p>
+
+                    <h3 data-translate="window.includedTitle">What's Included:</h3>
+                    <ul>
+                        <li><i class="fas fa-check"></i> <span data-translate="window.features.interior">Interior window cleaning</span></li>
+                        <li><i class="fas fa-check"></i> <span data-translate="window.features.exterior">Exterior window washing</span></li>
+                        <li><i class="fas fa-check"></i> <span data-translate="window.features.frames">Frame and sill cleaning</span></li>
+                        <li><i class="fas fa-check"></i> <span data-translate="window.features.polish">Glass polishing</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="social-links">
                 <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
                 <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
             </div>
-            <p>&copy; 2024 CleanPro. All Rights Reserved.</p>
+            <p>&copy; 2025 CleanPro. <span data-translate="footer.rights">All Rights Reserved.</span></p>
         </div>
     </footer>
 

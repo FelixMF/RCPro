@@ -30,7 +30,9 @@
         <div class="container">
             <nav>
                 <div class="logo">
+                    <a class="logo" href="../index.html">
                     <img src="imgs/Logo RCPro.PNG" alt="CleanPro Logo" class="logo-img">
+                    </a>
                 </div>
                 <ul class="nav-links">
                     <li><a href="../index.html" data-translate="nav.home">Home</a></li>
@@ -54,7 +56,7 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.pexels.com/photos/17041922/pexels-photo-17041922.jpeg');" id="home" data-scroll>
+    <section class="hero" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');" id="home" data-scroll>
         <div class="container">
             <div class="hero-content">
                 <h1 data-translate="hero.title">Professional Cleaning Services</h1>
@@ -168,20 +170,21 @@
     </div>
 
 
-    <div id="booking-modal" class="modal hidden">
+   <div id="booking-modal" class="modal hidden">
   <div class="modal-content">
-    <h2>Confirmar Reserva</h2>
-    <label for="customerName">Nombre completo:</label>
-    <input type="text" id="customerName" placeholder="Ingrese su nombre completo" />
-    <label for="customerPhone">Número de contacto:</label>
-    <input type="tel" id="customerPhone" placeholder="Ej: 0991234567" />
+    <h2 data-translate="bookingModal.title">Confirmar Reserva</h2>
+    <label for="customerName" data-translate="bookingModal.labels.customerName">Nombre completo:</label>
+    <input type="text" id="customerName" placeholder="Ingrese su nombre completo" data-translate-placeholder="bookingModal.placeholders.customerName" />
+    <label for="customerPhone" data-translate="bookingModal.labels.customerPhone">Número de contacto:</label>
+    <input type="tel" id="customerPhone" placeholder="Ej: 0991234567" data-translate-placeholder="bookingModal.placeholders.customerPhone" />
     <div class="modal-buttons">
-      <button id="cancelBtn">Cancelar</button>
-      <button id="submitBtn">Confirmar</button>
+      <button id="cancelBtn" data-translate="bookingModal.buttons.cancel">Cancelar</button>
+      <button id="submitBtn" data-translate="bookingModal.buttons.confirm">Confirmar</button>
     </div>
   </div>
 </div>
 </section>
+
 
     <!-- Contact Section -->
     <section class="contact" id="contact" data-scroll>
@@ -194,20 +197,21 @@
             <div class="contact-options-container">
                 <!-- Opción 1: Formulario de correo -->
                 <div class="contact-option">
-                    <div class="option-header">
-                        <i class="fas fa-envelope"></i>
-                        <h3 data-translate="contact.emailTitle">Email Us</h3>
-                    </div>
-                    <form class="contact-form">
-                        <input type="text" placeholder="Your Name" data-translate="[placeholder]contact.name" required>
-                        <input type="email" placeholder="Your Email" data-translate="[placeholder]contact.email" required>
-                        <input type="text" placeholder="Subject" data-translate="[placeholder]contact.subject">
-                        <textarea placeholder="Your Message" data-translate="[placeholder]contact.message" required></textarea>
-                        <button type="submit" class="btn" data-translate="btn.sendMessage">
-                            <i class="fas fa-paper-plane"></i> Send Message
-                        </button>
-                    </form>
-                </div>
+    <div class="option-header">
+        <i class="fas fa-envelope"></i>
+        <h3 data-translate="contact.emailTitle">Email Us</h3>
+    </div>
+    <form class="contact-form" id="contact-form">
+        <input type="text" name="name" placeholder="Your Name" data-translate="[placeholder]contact.name" required>
+        <input type="email" name="email" placeholder="Your Email" data-translate="[placeholder]contact.email" required>
+        <input type="text" name="subject" placeholder="Subject" data-translate="[placeholder]contact.subject">
+        <textarea name="message" placeholder="Your Message" data-translate="[placeholder]contact.message" required></textarea>
+        <button type="submit" class="btn" data-translate="btn.sendMessage">
+            <i class="fas fa-paper-plane"></i> Send Message
+        </button>
+    </form>
+</div>
+
                 
                 <!-- Opción 2: WhatsApp -->
                 <div class="contact-option whatsapp-option">
@@ -222,7 +226,7 @@
                         </a>
                         <p class="response-time">
                             <i class="fas fa-clock"></i> 
-                            <span data-translate="contact.responseTime">Typical response time: 15 minutes</span>
+                            <span data-translate="contact.responseTime">Typical response time: 30 minutes</span>
                         </p>
                     </div>
                 </div>
@@ -232,11 +236,11 @@
             <div class="contact-info">
                 <div class="info-item">
                     <i class="fas fa-map-marker-alt"></i>
-                    <p data-translate="contact.address">123 Cleaning St, Your City</p>
+                    <p data-translate="contact.address">Lancaster, Pensilvania</p>
                 </div>
                 <div class="info-item">
                     <i class="fas fa-phone"></i>
-                    <p data-translate="contact.phone">(123) 456-7890</p>
+                    <p data-translate="contact.phone">(1)3477326277</p>
                 </div>
                 <div class="info-item">
                     <i class="fas fa-clock"></i>
@@ -251,11 +255,10 @@
         <div class="container">
             <div class="social-links">
                 <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
                 <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
             </div>
-            <p data-translate="footer.copyright">&copy; 2024 CleanPro. All Rights Reserved.</p>
+            <p data-translate="footer.copyright">&copy; 2025 CleanPro. All Rights Reserved.</p>
         </div>
     </footer>
 
@@ -265,5 +268,36 @@
     <script src="scripts/headerSticky.js"></script>
     <script src="scripts/booking.js"></script>
     <script src="scripts/page-scrolling.js"></script>
+
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  (function() {
+    emailjs.init("KG6HclL4hl3K3rLnE"); // Reemplaza con tu PUBLIC_KEY real
+  })();
+
+  document.getElementById("contact-form").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    emailjs.sendForm("service_whawcxr", "template_rkke3id", this)
+      .then(function(response) {
+        Swal.fire({
+          icon: 'success',
+          title: '¡Mensaje enviado!',
+          text: 'Gracias por contactarnos. Te responderemos pronto.',
+          confirmButtonColor: '#3085d6'
+        });
+        document.getElementById("contact-form").reset(); // Limpia el formulario
+      }, function(error) {
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Hubo un problema al enviar tu mensaje. Inténtalo de nuevo.',
+          confirmButtonColor: '#d33'
+        });
+      });
+  });
+</script>   
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </body>
 </html>

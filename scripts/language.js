@@ -18,17 +18,25 @@ document.addEventListener('DOMContentLoaded', async function() {
             e.preventDefault();
             const lang = this.getAttribute('data-lang');
             await setLanguage(lang);
+            
+            // Disparar evento para otros componentes
+            const event = new CustomEvent('languageChanged', { 
+                detail: { lang: lang } 
+            });
+            document.dispatchEvent(event);
         });
     });
 
     async function setLanguage(lang) {
         localStorage.setItem('preferredLanguage', lang);
         currentLanguage.textContent = lang.toUpperCase();
+        document.documentElement.lang = lang;
         await updateContent(lang);
     }
 
     async function initLanguage(lang) {
         currentLanguage.textContent = lang.toUpperCase();
+        document.documentElement.lang = lang;
         await updateContent(lang);
     }
 
@@ -132,4 +140,6 @@ document.addEventListener('DOMContentLoaded', async function() {
         }
     }
 });
+
+
 

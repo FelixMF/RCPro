@@ -54,6 +54,22 @@
     "details": "Your Appointment Details",
     "selectedDate": "No date selected"
   },
+  "bookingModal": {
+    "title": "Confirm Booking",
+    "labels": {
+      "customerName": "Full Name:",
+      "customerPhone": "Contact Number:"
+    },
+    "placeholders": {
+      "customerName": "Enter your full name",
+      "customerPhone": "Ex: 0991234567"
+    },
+    "buttons": {
+      "cancel": "Cancel",
+      "confirm": "Confirm"
+    }
+  },
+  
   "contact": {
     "title": "Contact Us",
     "subtitle": "Get in touch with us for a free quote or to schedule a service.",

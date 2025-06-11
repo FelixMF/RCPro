@@ -1,0 +1,17 @@
+{
+    "title": "House Cleaning | CleanPro",
+    "house": {
+        "title": "House Cleaning",
+        "subtitle": "Our team provides thorough cleaning for every room, ensuring a fresh and healthy environment.",
+        "serviceTitle": "House Cleaning Service",
+        "description": "Our team provides thorough cleaning for every room, ensuring a fresh and healthy environment.",
+        "includedTitle": "What's Included:",
+        "features": {
+            "dusting": "Dusting and polishing all surfaces",
+            "kitchen": "Kitchen deep cleaning (including appliances)",
+            "bathroom": "Bathroom disinfection",
+            "floors": "Floor vacuuming and mopping",
+            "windows": "Window cleaning (interior)"
+        }
+    }
+}

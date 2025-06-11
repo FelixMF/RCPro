@@ -1,0 +1,26 @@
+{
+    "title": "Limpieza de Ventanas | CleanPro",
+    "window": {
+        "title": "Limpieza de Ventanas",
+        "subtitle": "Ventanas relucientes para una vista más brillante.",
+        "serviceTitle": "Servicio de Limpieza de Ventanas",
+        "description": "Eliminamos rayas, polvo y suciedad de todo tipo de ventanas, tanto interiores como exteriores.",
+        "includedTitle": "¿Qué incluye?",
+        "features": {
+            "interior": "Limpieza de ventanas interiores",
+            "exterior": "Lavado de ventanas exteriores",
+            "frames": "Limpieza de marcos y alféizares",
+            "polish": "Pulido de cristales"
+        }
+    },
+    "nav": {
+        "home": "Inicio",
+        "services": "Servicios",
+        "whyUs": "Por Qué Nosotros",
+        "contact": "Contacto"
+    },
+    "bookNow": "Reservar Ahora",
+    "footer": {
+        "rights": "Todos los derechos reservados."
+    }
+}

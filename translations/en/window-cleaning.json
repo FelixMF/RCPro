@@ -1,0 +1,26 @@
+{
+    "title": "Window Cleaning | CleanPro",
+    "window": {
+        "title": "Window Cleaning",
+        "subtitle": "Crystal-clear windows for a brighter view.",
+        "serviceTitle": "Window Cleaning Service",
+        "description": "We remove streaks, dust, and grime from all types of windows, both interior and exterior.",
+        "includedTitle": "What's Included:",
+        "features": {
+            "interior": "Interior window cleaning",
+            "exterior": "Exterior window washing",
+            "frames": "Frame and sill cleaning",
+            "polish": "Glass polishing"
+        }
+    },
+    "nav": {
+        "home": "Home",
+        "services": "Services",
+        "whyUs": "Why Us",
+        "contact": "Contact"
+    },
+    "bookNow": "Book Now",
+    "footer": {
+        "rights": "All Rights Reserved."
+    }
+}
