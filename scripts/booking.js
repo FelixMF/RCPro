@@ -158,10 +158,16 @@ document.addEventListener('DOMContentLoaded', async function() {
                 }
                 return classes;
             },
-            datesSet: function() {
+            datesSet: async function() {
                 if (loadingAnimation.parentNode) {
                     loadingAnimation.remove();
                 }
+                // Recargar fechas reservadas cada vez que se cambia de mes
+    const newBookedDates = await loadBookedDates();
+    bookedDates.length = 0; // Vaciar array manteniendo referencia
+    bookedDates.push(...newBookedDates);
+    
+    calendar.render(); // Forzar refresco visual
             }
         });
 
